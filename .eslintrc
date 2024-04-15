@@ -31,8 +31,11 @@
     "@typescript-eslint/no-unused-vars": ["error", { "argsIgnorePattern": "^_" }],
     "curly": ["error", "multi-line", "consistent"],
     "import/no-unresolved": "error",
+    "no-await-in-loop": "error",
+    "no-console": "error",
     "no-unused-vars": "off",
-    "prettier/prettier": ["error", {}, { "usePrettierrc": true }]
+    "prettier/prettier": ["error", {}, { "usePrettierrc": true }],
+    "require-await": "error"
   },
   "settings": {
     "import/parsers": {
