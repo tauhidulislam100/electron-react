@@ -1,5 +1,6 @@
 /* eslint-disable @typescript-eslint/no-explicit-any */
-import { IpcMainEvent, ipcMain, ipcRenderer } from "electron";
+import type { IpcMainEvent } from "electron";
+import { ipcMain, ipcRenderer } from "electron";
 
 type ApiChannel<T> = keyof T;
 
@@ -20,8 +21,6 @@ type IpcRenderer<T> = {
 
 export function createRenderer<T>(): IpcRenderer<T> {
   return {
-    send: <T>(channel: ApiChannel<T>, ...args: any) => {
-      ipcRenderer.send(channel as string, args);
-    }
+    send: <T>(channel: ApiChannel<T>, ...args: any) => ipcRenderer.send(channel as string, args)
   };
 }
