@@ -1,5 +1,5 @@
 import { fileSystem } from "./../fileSystem";
-import { ApiBridge } from ".";
+import type { ApiBridge } from ".";
 import { createMain } from "../ipc";
 
 const main = createMain<ApiBridge>();

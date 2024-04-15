@@ -29,6 +29,13 @@
   "ignorePatterns": ["*.config.js", "/src/app/components/ui/*.tsx"],
   "plugins": ["import", "prettier"],
   "rules": {
+    "@typescript-eslint/consistent-type-imports": [
+      "error",
+      {
+        "fixStyle": "separate-type-imports",
+        "prefer": "type-imports"
+      }
+    ],
     "@typescript-eslint/no-unused-vars": ["error", { "argsIgnorePattern": "^_" }],
     "curly": ["error", "multi-line", "consistent"],
     "import/no-unresolved": "error",

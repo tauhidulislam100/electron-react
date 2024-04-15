@@ -3,13 +3,6 @@
   "version": "0.2",
   "language": "en",
   "globRoot": ".",
-  "ignorePaths": [
-    "node_modules",
-    "dist",
-    "build"
-  ],
-  "words": [
-    "clsx",
-    "jsnext"
-  ]
+  "ignorePaths": ["node_modules", "dist", "build"],
+  "words": ["clsx", "jsnext"]
 }
