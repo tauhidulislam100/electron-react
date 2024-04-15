@@ -16,12 +16,8 @@ function resolvePath(...paths: string[]) {
 }
 
 async function initialize(directories: string[]) {
-  try {
-    const promises = directories.map((dir) => fs.mkdir(resolvePath(dir)));
-    await Promise.all(promises);
-  } catch {
-    /* empty */
-  }
+  const promises = directories.map((dir) => fs.mkdir(resolvePath(dir)));
+  await Promise.allSettled(promises);
 }
 
 export const fileSystem: FileSystem = {
