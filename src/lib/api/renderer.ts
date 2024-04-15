@@ -1,6 +1,6 @@
 import { contextBridge } from "electron";
 import { ApiBridge } from ".";
-import { createRenderer } from "..";
+import { createRenderer } from "../ipc";
 
 const renderer = createRenderer<ApiBridge>();
 
