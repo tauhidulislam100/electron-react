@@ -6,13 +6,13 @@ type FileSystem = {
   appendText: (directory: string, filename: string, content: string) => Promise<void>;
 };
 
+function resolvePath(...paths: string[]) {
+  return path.resolve(__dirname, ...paths);
+}
+
 async function appendText(directory: string, filename: string, content: string) {
   const path = resolvePath(directory, filename);
   await fs.appendFile(path, `${content}\n`, "utf8");
-}
-
-function resolvePath(...paths: string[]) {
-  return path.resolve(__dirname, ...paths);
 }
 
 async function initialize(directories: string[]) {
